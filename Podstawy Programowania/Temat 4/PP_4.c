@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
+int get_code (void);
 double nAdd(double, double);
 double nSubtract(double, double);
 double nMultiply(double, double);
@@ -11,7 +12,9 @@ double main()
 {
    double a,b,summ,subtract,multiply,divide,residue;
      char c;
+     int end;
      int k = 0;
+do{
      do{
        printf("Please, Enter Operation You Want To Perform \"+\", \"-\", \"*\", \"/\", \"%%\":\n");
        scanf("%c", &c);
@@ -44,6 +47,10 @@ double main()
        residue = nResidue(a,b);
        printf("The Result Of Residue Of %lf And %lf Is %lf\n", a,b,residue);
      }
+     printf("Do You Want To Make One More Operation?(ESC - To Exit!)");
+     end = get_code();
+     system("CLS");
+}while(end != 27);
    return 0;
 }
 
@@ -75,4 +82,10 @@ double nResidue(double a, double b){
     double residue;
     residue = fmod(a,b);
     return residue;
+}
+
+int get_code (void)
+{
+  int ch = getch();
+  return ch;
 }
