@@ -8,7 +8,7 @@ double nSubtract(double, double);
 double nMultiply(double, double);
 double nDivide(double, double);
 double nResidue(double, double);
-double main()
+int main()
 {
    double a,b,summ,subtract,multiply,divide,residue;
      char c;
