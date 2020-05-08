@@ -1,10 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
+#include <math.h>
 
-int main()
+double nAdd(double, double);
+double nSubtract(double, double);
+double nMultiply(double, double);
+double nDivide(double, double);
+double nResidue(double, double);
+double main()
 {
-   double a,b, summ,subtract,multiply,divide,residue;
+   double a,b,summ,subtract,multiply,divide,residue;
      char c;
      int k = 0;
      do{
@@ -19,6 +24,55 @@ int main()
        fflush(stdin);
        system("CLS");
      } while(k == 0);
-
+     if(c == '+'){
+       summ = nAdd(a, b);
+       printf("The Sum Of %lf And %lf Is %lf\n", a,b,summ);
+     }
+     else if(c == '-'){
+       subtract = nSubtract(a,b);
+       printf("The Result Of Substraction Of %lf And %lf Is %lf\n", a,b,subtract);
+     }
+     else if(c == '*'){
+       multiply = nMultiply(a,b);
+       printf("The Result Of Multiplication Of %lf And %lf Is %lf\n", a,b,multiply);
+     }
+     else if(c == '/'){
+       divide = nDivide(a,b);
+       printf("The Result Of Division Of %lf And %lf Is %lf\n", a,b,divide);
+     }
+     else if(c == '%'){
+       residue = nResidue(a,b);
+       printf("The Result Of Residue Of %lf And %lf Is %lf\n", a,b,residue);
+     }
    return 0;
+}
+
+double nAdd(double a, double b){
+	double summ;
+    summ = a + b;
+    return summ;
+}
+
+double nSubtract(double a, double b){
+    double subtract;
+    subtract = a - b;
+    return subtract;
+}
+
+double nMultiply(double a, double b){
+    double multiply;
+    multiply = a * b;
+    return multiply;
+}
+
+double nDivide(double a, double b){
+    double divide;
+    divide = a / b;
+    return divide;
+}
+
+double nResidue(double a, double b){
+    double residue;
+    residue = fmod(a,b);
+    return residue;
 }
