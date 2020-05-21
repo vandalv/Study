@@ -17,4 +17,4 @@ double arr[] = {-2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2};
 unsigned int n = sizeof(arr)/sizeof(arr[0]);
 fun(arr, n);
 return 0;
-} 
+}
