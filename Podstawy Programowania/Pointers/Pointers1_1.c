@@ -7,7 +7,7 @@ int num2;
 num = 13;
 numPtr = &num;
 num2 = *numPtr;
-printf("%d - num, %d - numPtr, %d - adress of num, %d - num2", num, numPtr, &num, &num2);
+printf("%d - num, %d - numPtr, %d - adress of num, %d - num2", num, numPtr, &num, num2);
 
   return 0;
 }
