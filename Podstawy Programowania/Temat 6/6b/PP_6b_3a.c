@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+
 #define SIZE 10
 
 void lower(char* p_surname);
 
 int main(){
-  char surname[SIZE-1];
-  char name[SIZE-1];
+  char surname[SIZE];
+  char name[SIZE];
   char* p_surname = NULL;
   char* p_name = NULL;
   p_surname = surname;
