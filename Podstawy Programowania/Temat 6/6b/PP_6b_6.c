@@ -14,4 +14,6 @@ int main(){
     fgets(b, 9, stdin);
     num2 = atof(b);
     printf("%lf\n", num2);
+    sprintf(c, "%d %d %d", b1, b2, b3);
+    printf("%s", c);
 }
