@@ -36,19 +36,26 @@ FILE* utworzNowyPlik (char *nazwa, char *tryb)
 
 void drukujStrukt(struct Silnik st)
 {
- printf("\n nazwa:%s", st.nazwa);
- printf("\n Identyfikator:%s", st.producent);
- printf("\n Typ: %lf", st.cenaNetto);
+ printf("\n Nazwa:%s", st.nazwa);
+ printf("\n Producent:%s", st.producent);
+ printf("\n Cena Netto: %lf", st.cenaNetto);
+ printf("\n Pojemnosc Skokowa: %d", st.daneSilnika.pojemnoscSkokowa);
+ printf("\n Moc: %d", st.daneSilnika.pojemnoscSkokowa);
+ printf("\n Moment Obrotowy: %d", st.daneSilnika.momentObrotowy);
+ printf("\n Paliwo: %s", st.daneSilnika.paliwo);
+ printf("\n VAT: %d", st.VAT);
+ printf("\n Cena Brutto: %lf", st.cenaBrutto);
+
 }
 
 
 
 int main(){
     struct Silnik Silniki[4] =
- {{"silnik","Sharp", 1000, 10, 3, 20,"Diesel"},
- {"silnik","Phillips", 4000, 15, 7, 30,"Benzin"},
- {"silnik","Honda", 2000, 17, 4, 150,"Diesel"},
- {"silnik","Toshiba", 1500, 16, 8, 80,"Benzin"}};
+ {{"silnik","Sharp", 1000, 10, 3, 20,"Diesel", 8, 1200},
+ {"silnik","Phillips", 4000, 15, 7, 30,"Benzin", 10, 4300},
+ {"silnik","Honda", 2000, 17, 4, 150,"Diesel", 8, 2200},
+ {"silnik","Toshiba", 1500, 16, 8, 80,"Benzin", 10, 1800}};
  FILE *fp1;
  int i;
  struct Silnik bufs;
@@ -68,5 +75,4 @@ while (fread(&bufs,sizeof(struct Silnik),1,fp1))
  printf("\n");
  }
  getchar();
- system("cls");
 }
