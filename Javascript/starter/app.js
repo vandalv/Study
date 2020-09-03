@@ -1,8 +1,8 @@
 let scores, roundScore, activePlayer;
-scores = [0,0];
+scores = [0, 0];
 roundScore = 0;
 activePlayer = 1;
-dice = Math.floor(Math.random() * (6)) + 1;
+dice = Math.floor(Math.random() * 6) + 1;
 console.log(dice);
 
 // ! DOM text change from selecting element by ID
