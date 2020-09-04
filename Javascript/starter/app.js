@@ -22,3 +22,4 @@ console.log(x);
 document.querySelector('.dice').style.display = 'none';
 
 console.log(x);
+console.log(x);
