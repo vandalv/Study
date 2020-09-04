@@ -23,3 +23,4 @@ document.querySelector('.dice').style.display = 'none';
 
 console.log(x);
 console.log(x);
+console.log(x);
