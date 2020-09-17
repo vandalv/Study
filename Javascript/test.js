@@ -1,6 +1,6 @@
 // Function Constructor
 
-const Person = () => (name, yearOfBirth, job) {
+const Person = (name, yearOfBirth, job) => {
   this.name = name;
   this.yearOfBirth = yearOfBirth;
   this.job = job;
@@ -9,4 +9,4 @@ const Person = () => (name, yearOfBirth, job) {
   };
 };
 
-let john = new Person('John', 1990, 'teacher');
+const john = new Person('John', 1990, 'teacher');
